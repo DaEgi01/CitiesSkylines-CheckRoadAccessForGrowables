@@ -2,7 +2,7 @@
 	<PropertyGroup>
 		<AssemblyTitle>CheckRoadAccessForGrowables</AssemblyTitle>
 		<Product>CheckRoadAccessForGrowables</Product>
-		<Copyright>Copyright ©  2021</Copyright>
+		<Copyright>MIT</Copyright>
 		<TargetFramework>net35</TargetFramework>
 		<Deterministic>false</Deterministic>
 		<AssemblyVersion>1.0.*</AssemblyVersion>
@@ -13,6 +13,8 @@
 		<SteamPath Condition="! Exists ('$(SteamPath)')">$(Registry:HKEY_CURRENT_USER\Software\Valve\Steam@SteamPath)</SteamPath>
 		<CslPath>$(SteamPath)\steamapps\common\Cities_Skylines</CslPath>
 		<CslMangedDllsPath>$(CslPath)\Cities_Data\Managed</CslMangedDllsPath>
+		<Authors>egi</Authors>
+		<Company />
 	</PropertyGroup>
 	<ItemGroup>
 	  <PackageReference Include="Lib.Harmony" Version="1.2.0.1" />
