@@ -43,11 +43,6 @@ namespace CheckRoadAccessForGrowables
 							for (ushort i = 0; i < buildings.m_size; i++)
 							{
 								var building = buildings.m_buffer[i];
-								if (building.m_flags == Building.Flags.None)
-								{
-									continue;
-								}
-
 								building.Info.m_buildingAI.CheckRoadAccess(i, ref building);
 							}
 
