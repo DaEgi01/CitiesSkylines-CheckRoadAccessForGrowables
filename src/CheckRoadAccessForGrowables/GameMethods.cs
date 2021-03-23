@@ -12,6 +12,9 @@ namespace CheckRoadAccessForGrowables
 	{
 		public static void CheckRoadAccess(ref ushort buildingID, ref Building data)
 		{
+			if (data.m_flags == Building.Flags.None)
+				return;
+
 			if (!(data.Info.GetAI() is PrivateBuildingAI))
 				return;
 
