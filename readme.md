@@ -1,7 +1,8 @@
 # Info
-Mod Version: 1.0.0
-Compatible Game Version: 1.13.1-f1
-Code by: egi
+Mod Version: 1.0.0  
+Compatible Game Version: 1.13.1-f1  
+Code by: egi  
+Dependencies: Harmony 1.2.0.1
 
 # Short Description
 Shows with the "No Road Access" icon indicator if you have disrupted the road access for growables and RICO.
@@ -10,10 +11,7 @@ Shows with the "No Road Access" icon indicator if you have disrupted the road ac
 In case you don't use "Plop the Growables", "RICO" or something similar, and you have never seen the issue with the flickering service vehicles not leaving the service building, this mod is probably not for you.
 
 # Long Description
-This mod is part of a bigger solution to fix the issue when some service vehicles refuse to leave the building and effectively stop to function while blocking other service building from taking over. As a symptom you'll see the service vehicle numbers flicker in the building tooltip.
-This can cause a total breakdown of whole districts while making it difficult for the player to see the reason.
-The actual cause is that the game can't determine a path from the service building the target building.
-This can have two reasons.
+This mod is part of a bigger solution to fix the issue when some service vehicles refuse to leave the building and effectively stop to function while blocking other service building from taking over. As a symptom you'll see the service vehicle numbers flicker in the building tooltip. This can cause a total breakdown of whole districts while making it difficult for the player to see the reason. The actual cause is that the game can't determine a path from the service building the target building. This can have two reasons.
 
 1. The service or the destination building does not have road access.
 This is handled by default with a method that check if a ploppable building has road access.
