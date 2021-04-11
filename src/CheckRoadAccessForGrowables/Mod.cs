@@ -1,5 +1,4 @@
-﻿using ColossalFramework.Threading;
-using ColossalFramework.UI;
+﻿using ColossalFramework.UI;
 using Harmony;
 using ICities;
 using System.Reflection;
@@ -11,7 +10,7 @@ namespace CheckRoadAccessForGrowables
 	{
 		private readonly string _harmonyId = "egi.citiesskylinesmods.checkroadaccessforgrowables";
 
-		public string Name => "Check Road Access";
+		public string Name => "Check Road Access for Growables";
 		public string Description => "Shows if you have cut the road access for growables.";
 
 		public void OnEnabled()
