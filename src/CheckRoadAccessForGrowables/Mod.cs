@@ -17,10 +17,13 @@ namespace CheckRoadAccessForGrowables
 		{
 			var harmony = HarmonyInstance.Create(_harmonyId);
 
-			var originalMethod = typeof(BuildingAI).GetMethod("CheckRoadAccess", BindingFlags.Public | BindingFlags.Instance);
-			var replacementMethod = typeof(GameMethods).GetMethod("CheckRoadAccess", BindingFlags.Public | BindingFlags.Static);
+			var checkRoadAccess = typeof(BuildingAI).GetMethod("CheckRoadAccess", BindingFlags.Public | BindingFlags.Instance);
+			var checkRoadAccessPostfix = typeof(GameMethods).GetMethod(nameof(GameMethods.CheckRoadAccess), BindingFlags.Public | BindingFlags.Static);
+			harmony.Patch(checkRoadAccess, null, new HarmonyMethod(checkRoadAccessPostfix));
 
-			harmony.Patch(originalMethod, null, new HarmonyMethod(replacementMethod));
+			var createBuilding = typeof(BuildingAI).GetMethod("CreateBuilding", BindingFlags.Public | BindingFlags.Instance);
+			var createBuildingPostfix = typeof(GameMethods).GetMethod(nameof(GameMethods.CreateBuilding), BindingFlags.Public | BindingFlags.Static);
+			harmony.Patch(createBuilding, null, new HarmonyMethod(createBuildingPostfix));
 		}
 
 		public void OnDisabled()
