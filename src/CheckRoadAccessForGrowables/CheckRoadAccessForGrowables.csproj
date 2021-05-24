@@ -15,6 +15,7 @@
 		<CslMangedDllsPath>$(CslPath)\Cities_Data\Managed</CslMangedDllsPath>
 		<Authors>egi</Authors>
 		<Company />
+		<Version>1.1.0</Version>
 	</PropertyGroup>
 	<ItemGroup>
 	  <PackageReference Include="Lib.Harmony" Version="1.2.0.1" />
