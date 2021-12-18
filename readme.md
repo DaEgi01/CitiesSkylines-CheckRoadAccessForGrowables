@@ -1,8 +1,7 @@
 # Info
-Mod Version: 1.0.0  
-Compatible Game Version: 1.13.1-f1  
+Mod Version: 1.2.0  
+Compatible Game Version: 1.13.3-f9  
 Code by: egi  
-Dependencies: Harmony 1.2.0.1
 
 # Short Description
 Shows with the "No Road Access" icon indicator if you have disrupted the road access for growables and RICO.
