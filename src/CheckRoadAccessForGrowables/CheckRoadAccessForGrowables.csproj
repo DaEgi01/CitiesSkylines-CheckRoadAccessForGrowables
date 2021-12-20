@@ -5,7 +5,7 @@
 		<Copyright>MIT</Copyright>
 		<TargetFramework>net35</TargetFramework>
 		<Deterministic>false</Deterministic>
-		<AssemblyVersion>1.0.*</AssemblyVersion>
+		<AssemblyVersion>1.2.*</AssemblyVersion>
 		<GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
 	</PropertyGroup>
 	<PropertyGroup>
