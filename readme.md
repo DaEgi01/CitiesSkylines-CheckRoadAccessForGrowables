@@ -1,13 +1,22 @@
 # Info
-Mod Version: 1.2.0  
-Compatible Game Version: 1.13.3-f9  
+Mod Version: 1.3.0
+Compatible Game Version: 1.15.0-f7 - Plazas & Promenades  
 Code by: egi  
+
+# New in 1.3.0
+Rewrote to make it work with the new 1.15.0-f7 - Plazas & Promenades update.
+
+# New in 1.2.0
+Switch to Harmony 2, no functional changes.
+
+# New in 1.1.0
+Road access check is now also performed during plopping of growables, which should help if you use Building Anarchy and friends. A huge shout-out to LemonsterOG who found the issue and helped me analyzed and fix it.
 
 # Short Description
 Shows with the "No Road Access" icon indicator if you have disrupted the road access for growables and RICO.
 
 # Maybe not for you!
-In case you don't use "Plop the Growables", "RICO" or something similar, and you have never seen the issue with the flickering service vehicles not leaving the service building, this mod is probably not for you.
+In case you don't use "MoveIt", "Plop the Growables", "RICO" or something similar, and you have never seen the issue with the flickering service vehicles not leaving the service building, this mod is probably not for you.
 
 # Long Description
 This mod is part of a bigger solution to fix the issue when some service vehicles refuse to leave the building and effectively stop to function while blocking other service building from taking over. As a symptom you'll see the service vehicle numbers flicker in the building tooltip. This can cause a total breakdown of whole districts while making it difficult for the player to see the reason. The actual cause is that the game can't determine a path from the service building the target building. This can have two reasons.
@@ -37,4 +46,4 @@ For existing savegames there is a button in the options menu to trigger a rechec
 This is normally only interesting to do once for each savegame. After you have found and fixed the issues the change to MoveIt should be enough to take you from there.
 
 # Performance
-The performance impact of this mod seems to be pretty small, at least on my computer. Please contact me if your experience is different. I tried to measure the performance impact but could not get any significant numbers that I could separate from regular run to run variance.
+The performance impact of this mod is almost zero.
