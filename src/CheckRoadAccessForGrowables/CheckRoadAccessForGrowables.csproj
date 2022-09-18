@@ -3,23 +3,23 @@
 		<AssemblyTitle>CheckRoadAccessForGrowables</AssemblyTitle>
 		<Product>CheckRoadAccessForGrowables</Product>
 		<Copyright>MIT</Copyright>
+		<Authors>egi</Authors>
+		<Company />
+		<Version>1.3.1</Version>
+		<PackageVersion>1.3.1</PackageVersion>
+		<AssemblyVersion>1.3.1.*</AssemblyVersion>
 		<TargetFramework>net35</TargetFramework>
 		<Deterministic>false</Deterministic>
-		<AssemblyVersion>1.3.*</AssemblyVersion>
 		<GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
-		<PackageVersion>1.3.0</PackageVersion>
 	</PropertyGroup>
 	<PropertyGroup>
 		<SteamPath>$(ProgramFiles)\Steam</SteamPath>
 		<SteamPath Condition="! Exists ('$(SteamPath)')">$(Registry:HKEY_CURRENT_USER\Software\Valve\Steam@SteamPath)</SteamPath>
 		<CslPath>$(SteamPath)\steamapps\common\Cities_Skylines</CslPath>
 		<CslMangedDllsPath>$(CslPath)\Cities_Data\Managed</CslMangedDllsPath>
-		<Authors>egi</Authors>
-		<Company />
-		<Version>1.2.0</Version>
 	</PropertyGroup>
 	<ItemGroup>
-	  <PackageReference Include="CitiesHarmony.API" Version="2.0.0" />
+	  <PackageReference Include="CitiesHarmony.API" Version="2.1.0" />
 	</ItemGroup>
 	<ItemGroup>
 		<Reference Include="Assembly-CSharp">
