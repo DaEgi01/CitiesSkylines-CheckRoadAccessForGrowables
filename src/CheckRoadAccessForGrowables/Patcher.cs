@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-using HarmonyLib;
+﻿using HarmonyLib;
 
 namespace CheckRoadAccessForGrowables
 {
@@ -15,22 +14,8 @@ namespace CheckRoadAccessForGrowables
 
 			var harmony = new Harmony(_harmonyId);
 
-			harmony.PatchAll(typeof(Patcher).Assembly);
-
-			var commonBuildingAICheckRoadAccess = typeof(CommonBuildingAI)
-				.GetMethod("CheckRoadAccess", BindingFlags.Public | BindingFlags.Instance);
-			Check.RequireNotNull(commonBuildingAICheckRoadAccess, nameof(commonBuildingAICheckRoadAccess));
-			// var commonBuildingAICheckRoadAccessTranspiler = typeof(CheckRoadAccessTranspiler)
-			// 	.GetMethod(nameof(CheckRoadAccessTranspiler.Transpiler), BindingFlags.Public | BindingFlags.Static);
-			// Check.RequireNotNull(commonBuildingAICheckRoadAccessTranspiler, nameof(commonBuildingAICheckRoadAccessTranspiler));
-			// CheckRoadAccessTranspiler.Init();
-			// harmony.Patch(commonBuildingAICheckRoadAccess, transpiler: new HarmonyMethod(commonBuildingAICheckRoadAccessTranspiler));
-
-			CheckRoadAccessPrefix.Init();
-			var checkRoadAccessPrefix = typeof(CheckRoadAccessPrefix)
-				.GetMethod(nameof(CheckRoadAccessPrefix.CheckRoadAccess), BindingFlags.Public | BindingFlags.Static);
-			Check.RequireNotNull(checkRoadAccessPrefix, nameof(checkRoadAccessPrefix));
-			harmony.Patch(commonBuildingAICheckRoadAccess, prefix: new HarmonyMethod(checkRoadAccessPrefix));
+			new CheckRoadAccessPatch(harmony)
+				.Apply();
 
 			_patched = true;
 		}
