@@ -55,7 +55,6 @@ namespace CheckRoadAccessForGrowables
 			_harmony.Patch(commonBuildingAICheckRoadAccess, prefix: new HarmonyMethod(checkRoadAccessPrefix));
 		}
 
-		// ReSharper disable once InconsistentNaming
 		public static bool CheckRoadAccess(ushort buildingID, ref Building data, CommonBuildingAI __instance)
 		{
 			bool noRoadConnection = true;
@@ -72,6 +71,7 @@ namespace CheckRoadAccessForGrowables
 					BuildingInfo.ZoningMode.CornerLeft => data.CalculateSidewalkPosition(data.Width * 4f, 4f),
 					BuildingInfo.ZoningMode.CornerRight => data.CalculateSidewalkPosition(data.Width * -4f, 4f),
 					BuildingInfo.ZoningMode.Straight => data.CalculateSidewalkPosition(0f, 4f),
+					BuildingInfo.ZoningMode.NotZoning => data.m_position,
 					_ => throw new ArgumentOutOfRangeException()
 				};
 
