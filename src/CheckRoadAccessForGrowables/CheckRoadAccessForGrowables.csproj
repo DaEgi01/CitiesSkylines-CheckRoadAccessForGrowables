@@ -4,7 +4,7 @@
 		<Company />
 		<Product>Check Road Access for Growables</Product>
 		<Description>Adds road access checks to growables.</Description>
-		<Version>1.3.2</Version>
+		<Version>1.3.3</Version>
 		<Copyright>MIT</Copyright>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
@@ -19,7 +19,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CitiesHarmony.API" Version="2.1.0" />
+		<PackageReference Include="CitiesHarmony.API" Version="2.2.0" />
 	</ItemGroup>
 
 	<PropertyGroup>
